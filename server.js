@@ -9,8 +9,8 @@ const PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(express.static('public'));
-app.use(index);
-app.use(api);
+app.use("/", index);
+app.use("/api", api);
 
 app.listen(PORT, () =>
   console.log(`Example app listening at http://localhost:${PORT}`)
